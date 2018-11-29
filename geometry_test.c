@@ -4,6 +4,10 @@
  * CSCI 3308
  * Summer 2014
  *
+ * Edited By Maureen Aubrey
+ * CSCI 3308_203
+ * Fall 2018
+ *
  * This file containsunit tests for geometry.c
  *
  * Requires http://check.sourceforge.net/
