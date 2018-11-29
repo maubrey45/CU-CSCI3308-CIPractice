@@ -69,3 +69,29 @@ void coord_2d_midpoint(coord_2d_t* mid, const coord_2d_t* a, const coord_2d_t* b
     mid->y = ((a->y + b->y) / 2.0 );
 
 }
+
+double coord_2d_area_triangle(const coord_2d_t* a, const coord_2d_t* b, const coord_2d_t* c)
+{
+    /* Input Checks */
+    if(!a){
+        DEBUG(__FILE__, __LINE__, __func__, "'a' must not be NULL");
+        return -1;
+    }
+    if(!b){
+        DEBUG(__FILE__, __LINE__, __func__, "'b' must not be NULL");
+        return -1;
+    }
+    if(!c){
+        DEBUG(__FILE__, __LINE__, __func__, "'b' must not be NULL");
+        return -1;
+    }
+
+    double area; 
+    //area = |(Ax(By-Cy) + Bx(Cy-Ay) + Cx(Ay-By))/2|
+    double Ax = a->x*(b->y - c->y);
+    double Bx = b->x*(c->y - a->y);
+    double Cx = c->x*(a->y - b->y);
+    //fabs gets the absolute value of a double
+    area = fabs((Ax + Bx + Cx)/2);
+    return area;
+}
