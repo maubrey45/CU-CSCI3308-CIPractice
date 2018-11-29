@@ -2,6 +2,10 @@
 # CI Practice
 # Summer 2014
 
+# Maureen Aubrey
+# CSCI 3308_203
+# Fall 2018
+
 CC = gcc
 CFLAGS = -c -g -Wall -Wextra
 LFLAGS = -g -Wall -Wextra
